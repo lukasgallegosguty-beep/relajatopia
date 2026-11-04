@@ -29,6 +29,8 @@ MANIFIESTO = RAIZ / "js" / "content" / "voz-clips.js"
 VOZ = "ef_dora"
 VELOCIDAD = 0.86
 IDIOMA = "es-419"  # español latinoamericano, sin ceceo
+# Ritmo final de unos 13 caracteres por segundo, más pausado que una lectura normal.
+FILTROS = "atempo=0.87,alimiter=limit=0.89:level=false"
 
 # Cómo se escribe para la voz lo que se leería mal tal cual.
 PRONUNCIACION = {
@@ -95,7 +97,7 @@ def main():
             wav = Path(tmp) / "x.wav"
             sf.write(wav, muestras, sr)
             subprocess.run(
-                ["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-ac", "1", "-c:a", "aac", "-b:a", "48k",
+                ["ffmpeg", "-y", "-loglevel", "error", "-i", str(wav), "-af", FILTROS, "-ac", "1", "-c:a", "aac", "-b:a", "48k",
                  "-movflags", "+faststart", str(SALIDA / f"{f['clave']}.m4a")],
                 check=True,
             )
