@@ -63,7 +63,8 @@ const formatoTiempo = (seg) => {
 
 export function Reproductor({ id, min }) {
   const s = sesionPorId(id);
-  const minutos = Number(min);
+  if (!s) return html`<${Cabecera} atras="/practicar" />`;
+  const minutos = s.duraciones.includes(Number(min)) ? Number(min) : s.duraciones[0];
   const e = obtener();
   const linea = useMemo(() => construirLinea(s, minutos, duracionTexto), [id, min]);
   const [transcurrido, fijarTranscurrido] = useState(0);

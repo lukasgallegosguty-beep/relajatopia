@@ -1,5 +1,5 @@
 // Archivo generado por herramientas/generar-sw.mjs. No lo edites a mano.
-const VERSION = 'relajatopia-b3edb14bb2';
+const VERSION = 'relajatopia-a112dbe40b';
 const CACHE_VOZ = 'relajatopia-voz-1';
 const ARCHIVOS = [
   "./",

@@ -237,6 +237,7 @@ export const LECTURAS = [
     bloques: [
       ['C', 'En un ensayo aleatorizado de Robert Emery, familias con custodia en disputa fueron a mediación o a litigio por sorteo. Doce años después, el 30 % de los progenitores no residentes del grupo de mediación veía a sus hijos cada semana, frente al 9 % del grupo de litigio.'],
       ['C', 'La mediación promedió unas 5 horas y el conflicto no aumentó. Es uno de los hallazgos causales más sólidos de esta literatura.'],
+      ['C', 'Los programas preventivos también funcionan: New Beginnings (Wolchik y Sandler), evaluado en ensayos aleatorizados, mostró efectos sobre la salud mental de hijas e hijos a 6 y 15 años.'],
       ['I', 'Si hay violencia, la mediación puede no ser adecuada: busca orientación legal primero.'],
     ],
   },
@@ -320,6 +321,7 @@ export const LECTURAS = [
       ['I', 'El término es de John Welwood: usar ideas espirituales para evitar emociones, conflictos o decisiones. Por ejemplo, “todo es vacuidad”, “es mi karma” o “debo ser compasivo”.'],
       ['I', 'Señales: ecuanimidad aparente con insomnio, irritabilidad o malestar físico; no poder expresar un enojo legítimo; minimizar un daño.'],
       ['C', 'La supresión expresiva rinde menos que la reevaluación y aumenta la activación fisiológica. La ecuanimidad auténtica permite sentir.'],
+      ['I', 'También hay un riesgo al sacar las técnicas de su contexto: sin su marco ético, el mindfulness puede volverse una herramienta de rendimiento o autoexplotación. A la inversa, usar conceptos como karma o samaya sin contexto genera malentendidos dañinos.'],
     ],
   },
   {

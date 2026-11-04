@@ -566,9 +566,19 @@ input[type='range'] {
   font-size: 32px;
 }
 
+.saludo h1,
+.saludo p {
+  text-shadow: 0 1px 12px rgba(7, 18, 54, 0.5);
+}
+
 .saludo p {
   margin-top: 4px;
   font-size: 18px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
 }
 
 .cuerpo {
@@ -581,6 +591,10 @@ input[type='range'] {
 
 .bloque > h2 {
   margin-bottom: 12px;
+}
+
+.pantalla-hoy .cuerpo > .bloque:first-child {
+  margin-top: 4px;
 }
 
 /* Olas */
@@ -605,6 +619,9 @@ input[type='range'] {
 
 .ola span {
   color: var(--tinta);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
 }
 
 .ola.activa {
@@ -1081,6 +1098,7 @@ input[type='range'] {
 }
 
 .aviso-fuerte {
+  background: var(--suelo-2);
   background: color-mix(in srgb, var(--flamenco) 16%, var(--suelo));
 }
 
@@ -1783,12 +1801,54 @@ input[type='range'] {
   padding: 8px 0;
 }
 
+.comparacion li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--suelo-borde);
+}
+
+.comparacion dl {
+  margin-top: 6px;
+  display: grid;
+  gap: 6px;
+}
+
+.comparacion dt {
+  color: var(--tinta-2);
+  font-size: 16px;
+}
+
+.pantalla-error {
+  padding: calc(var(--seguro-sup) + 40px) var(--gutter);
+}
+
+.pantalla-error .btn {
+  margin-top: 20px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 1ms !important;
     transition-duration: 1ms !important;
+  }
+}
+
+@media (max-width: 345px) {
+  :root {
+    --gutter: 16px;
+  }
+  .ola {
+    font-size: 14px;
+  }
+  .segmentos {
+    gap: 14px;
+  }
+  .tabs a {
+    font-size: 14px;
+  }
+  .rep-frase p {
+    font-size: 24px;
   }
 }
 

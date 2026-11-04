@@ -42,6 +42,8 @@ export function Bienvenida() {
       creado: new Date().toISOString(),
     });
     cambiarCampo('intencion', '');
+    // Pide al navegador que no borre estos datos si le falta espacio.
+    if (navigator.storage && navigator.storage.persist) navigator.storage.persist().catch(() => {});
     location.hash = '/hoy';
   };
 

@@ -5,7 +5,7 @@ import { lecturaPorId, ORIGENES } from '../content/lecturas.js';
 import { sesionPorId, TEMAS, textoDuraciones } from '../content/sesiones.js';
 import { fasePorId, planDelDia, SITUACIONES, situacionPorId } from '../content/caminos.js';
 import { ejercicioPorId } from '../content/ejercicios.js';
-import { PROGRAMAS, LIMITES, CUANDO_AYUDA, TELEFONOS, MEDIACION, BIBLIOGRAFIA, refPorId, AVISO } from '../content/referencias.js';
+import { PROGRAMAS, LIMITES, COMPARACION, RECOMENDACIONES, CUANDO_AYUDA, TELEFONOS, MEDIACION, BIBLIOGRAFIA, refPorId, AVISO } from '../content/referencias.js';
 
 export function Lectura({ id }) {
   const l = lecturaPorId(id);
@@ -169,6 +169,19 @@ export function Evidencia() {
         <dl><dt>Calidad</dt><dd>${p.calidad}. ${p.nota}</dd></dl>
       </li>`)}
     </ul>
+    <h2>Tradición y psicología, tema por tema</h2>
+    <ul class="comparacion">
+      ${COMPARACION.map((c) => html`<li>
+        <p class="prog-nombre">${c.tema}</p>
+        <dl>
+          <div><dt>Tradición</dt><dd>${c.tradicion}</dd></div>
+          <div><dt>Psicología</dt><dd>${c.psicologia}</dd></div>
+          <div><dt>Dónde se cruzan</dt><dd>${c.cruce}</dd></div>
+        </dl>
+      </li>`)}
+    </ul>
+    <h2>Seis recomendaciones</h2>
+    <ol class="pasos">${RECOMENDACIONES.map((r) => html`<li>${r}</li>`)}</ol>
     <h2>Límites de esta evidencia</h2>
     <ul class="lista-simple">${LIMITES.map((l) => html`<li>${l}</li>`)}</ul>
     <p class="nota">${AVISO}</p>

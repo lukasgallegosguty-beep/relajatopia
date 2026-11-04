@@ -198,7 +198,7 @@ export function Ajustes() {
     <p class="para">En iPhone, abre esta página en Safari, toca Compartir y luego “Agregar a inicio”. En Android, abre el menú de Chrome y toca “Instalar app”.</p>
 
     <h2>Tus datos</h2>
-    <p class="para">Todo se guarda solo en este teléfono. Si cambias de equipo o borras los datos del navegador, se pierde, salvo que tengas un respaldo.</p>
+    <p class="para">Todo se guarda solo en este teléfono. Si cambias de equipo o borras los datos del navegador, se pierde, salvo que tengas un respaldo. En iPhone, instalar la app en la pantalla de inicio ayuda a que Safari no borre tus datos.</p>
     ${!hayPersistencia() ? html`<${Aviso} tono="fuerte"><p>Este navegador no permite guardar datos. Lo que registres se perderá al cerrar la app.</p><//>` : null}
     <div class="acciones-diario">
       <button class="btn btn-secundario" type="button" onClick=${exportar}>Crear respaldo</button>

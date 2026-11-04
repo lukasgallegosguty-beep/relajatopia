@@ -113,7 +113,7 @@ export class Laguna {
     this.dpr = dpr;
     this.canvas.width = W;
     this.canvas.height = H;
-    this.m = Math.ceil(26 * dpr);
+    this.m = Math.ceil(36 * dpr);
     this.hz = Math.round(H * this.op.horizonte);
     this.arriba = this.arriba || document.createElement('canvas');
     this.arriba.width = W + this.m * 2;
@@ -374,7 +374,7 @@ export class Laguna {
       const k = y / altoLago;
       const fuenteY = hz - 1 - y * 0.92;
       if (fuenteY < 0) break;
-      const amp = (ag * (1.4 + 17 * k * k) + 0.16) * dpr;
+      const amp = (ag * (2 + 25 * k * k) + 0.16) * dpr;
       let dx = amp * Math.sin(y * (0.05 / dpr) * (1 + (1 - k) * 2.2) + t * 1.9);
       dx += amp * 0.5 * Math.sin(y * (0.17 / dpr) - t * 1.25);
       dx = Math.max(-limite, Math.min(limite, dx));
@@ -383,7 +383,7 @@ export class Laguna {
 
     // Tinte del agua: cuanto más agitada, menos se ve el reflejo
     const tinte = ctx.createLinearGradient(0, hz, 0, H);
-    tinte.addColorStop(0, rgba(p.agua, 0.2 + ag * 0.4));
+    tinte.addColorStop(0, rgba(p.agua, 0.2 + ag * 0.46));
     tinte.addColorStop(1, rgba(p.agua, 0.5 + ag * 0.38));
     ctx.fillStyle = tinte;
     ctx.fillRect(0, hz, W, altoLago);

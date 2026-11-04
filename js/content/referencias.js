@@ -61,6 +61,49 @@ export const LIMITES = [
   'La investigación sobre custodia compartida está politizada y es sobre todo observacional.',
 ];
 
+// Budismo tibetano y psicología contemporánea, tema por tema (informe, sección 8).
+export const COMPARACION = [
+  {
+    tema: 'Emociones',
+    tradicion: 'Las aflicciones son pasajeras. Se trabajan con atención, análisis y antídotos.',
+    psicologia: 'Las emociones son respuestas funcionales. Se regulan eligiendo la situación, la atención, la reevaluación o la respuesta.',
+    cruce: 'Alta coincidencia técnica. La tradición aspira a erradicar la aflicción, y la psicología, a regularla.',
+  },
+  {
+    tema: 'Expectativas',
+    tradicion: 'El aferramiento genera sufrimiento. Impermanencia y ocho preocupaciones mundanas.',
+    psicologia: 'Error de predicción, adaptación hedónica y aceptación.',
+    cruce: 'Coincidencia fuerte. La ciencia añade que las expectativas positivas realistas también suman.',
+  },
+  {
+    tema: 'Felicidad',
+    tradicion: 'Sukha es un estado duradero que se cultiva, distinto del placer.',
+    psicologia: 'Bienestar hedónico y eudaimónico, con un papel central de las relaciones.',
+    cruce: 'Ambas la ven entrenable y relacional. La ciencia mide sobre todo autoinformes.',
+  },
+  {
+    tema: 'Propósito',
+    tradicion: 'Bodhicitta, con motivación y dedicación diarias.',
+    psicologia: 'Sentido, propósito y valores, asociados con mejor salud.',
+    cruce: 'Coinciden en el propósito orientado a otros. La tensión está en el marco de renacimiento y liberación.',
+  },
+  {
+    tema: 'Compromisos',
+    tradicion: 'Votos de bodhisattva, paciencia y compasión con sabiduría.',
+    psicologia: 'Compromiso con valores, límites y crianza con autoridad afectiva.',
+    cruce: 'Coincidencia práctica. El riesgo son las lecturas de karma y samaya que justifican el abuso.',
+  },
+];
+
+export const RECOMENDACIONES = [
+  'Prioriza lo que protege a tus hijos: menos conflicto expuesto y una relación cálida con autoridad afectiva. La práctica es un medio para eso.',
+  'Si hay litigio o conflicto bloqueado, prueba la mediación: es la intervención con mejor evidencia causal a largo plazo.',
+  'Usa la reevaluación como herramienta principal para la ira y el resentimiento, y la autocompasión para la culpa.',
+  'Elige un programa estructurado con evidencia y una persona instructora calificada, atenta a los efectos adversos.',
+  'Mantén separados compromiso y sumisión: la compasión sabia incluye límites, y aceptar no incluye tolerar abuso.',
+  'Elige maestros e instituciones con transparencia y códigos de conducta. Desconfía de cualquier marco que exija obediencia o silencio.',
+];
+
 // Criterios para buscar ayuda profesional.
 export const CUANDO_AYUDA = [
   {

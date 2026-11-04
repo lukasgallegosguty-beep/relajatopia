@@ -1,6 +1,6 @@
 // Punto de entrada: navegación, tema y marco de la app.
 
-import { render, useEffect, useState } from '../vendor/preact-htm.mjs';
+import { render, useEffect, useErrorBoundary, useState } from '../vendor/preact-htm.mjs';
 import { html, Icono } from './ui.js';
 import { useEstado } from './estado.js';
 import { horaActual } from './laguna.js';
@@ -98,12 +98,24 @@ const PANTALLA_COMPLETA = new Set(['reproducir', 'respirar', 'ejercicio', 'regis
 function App() {
   const ruta = useRuta();
   const e = useEstado();
+  const [fallo, reiniciar] = useErrorBoundary();
 
   useEffect(() => {
     aplicarTema(e.ajustes.tema);
     const id = setInterval(() => aplicarTema(e.ajustes.tema), 60000);
     return () => clearInterval(id);
   }, [e.ajustes.tema]);
+
+  if (fallo) {
+    return html`<div class="pantalla-error">
+      <h1>Esta pantalla no se pudo abrir</h1>
+      <p class="lead">Tus datos siguen guardados. Vuelve a Hoy para continuar.</p>
+      <button class="btn btn-principal" type="button" onClick=${() => {
+        location.hash = '/hoy';
+        reiniciar();
+      }}>Volver a Hoy</button>
+    </div>`;
+  }
 
   if (!e.perfil.listo) return html`<${Bienvenida} />`;
 
