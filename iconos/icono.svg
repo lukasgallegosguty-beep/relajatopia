@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Relajatopia</title>
+  <rect width="512" height="512" rx="112" fill="#0E7479"/>
+  <circle cx="352" cy="176" r="44" fill="#F2798F"/>
+  <path d="M0 268h512v132a112 112 0 0 1-112 112H112A112 112 0 0 1 0 400z" fill="#0A4A54"/>
+  <path d="M256 92 412 268H100z" fill="#EEF4F2"/>
+  <path d="M256 92l52 58.700-24.500 20.300-27.500-24-27.500 24L204 150.700z" fill="#FFFFFF"/>
+  <path d="M100 268h312L256 444z" fill="#57B5B0"/>
+  <rect x="0" y="264" width="512" height="8" fill="#BFE7E4"/>
+</svg>
